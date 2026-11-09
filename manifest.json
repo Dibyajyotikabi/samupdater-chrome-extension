@@ -2,9 +2,9 @@
   "manifest_version": 3,
   "name": "SamUpdater: Galaxy Update Checker",
   "short_name": "SamUpdater",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "minimum_chrome_version": "116",
-  "description": "Check the latest Samsung Galaxy firmware build, release date and security patch for your device and CSC.",
+  "description": "Check Samsung Galaxy firmware by device and CSC, and see recent releases tracked by SamUpdater.",
   "homepage_url": "https://samupdater.com/",
   "action": {
     "default_title": "Check Galaxy updates",
@@ -22,6 +22,6 @@
   },
   "host_permissions": ["https://samupdater.com/*"],
   "content_security_policy": {
-    "extension_pages": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src https://samupdater.com/wp-admin/admin-ajax.php; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';"
+    "extension_pages": "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src https://samupdater.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none';"
   }
 }

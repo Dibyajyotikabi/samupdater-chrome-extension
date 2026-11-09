@@ -1,8 +1,10 @@
-![SamUpdater Galaxy Update Checker for Chrome, illustrated with Galaxy S24 Ultra and INS selected](assets/samupdater-chrome-cover.png)
+![Illustration of the SamUpdater checker and its latest firmware releases](assets/samupdater-chrome-cover.png)
 
 # SamUpdater for Chrome
 
 Open SamUpdater from your Chrome toolbar to see the latest firmware Samsung lists for your Galaxy. Pick your device and country or CSC code to see the build number, release date, security patch, and any One UI and Android versions listed in the release notes.
+
+Below the checker, you can see three recent firmware releases and open Samsung's notes for each model and CSC.
 
 [**Download source ZIP**](https://github.com/Dibyajyotikabi/samupdater-chrome-extension/archive/refs/heads/main.zip) · [SamUpdater website](https://samupdater.com/) · [Galaxy guides](https://samupdater.com/category/how-to/)
 
@@ -17,7 +19,7 @@ If your Galaxy has a carrier variant, enter the model number from **Settings > A
 
 ## Check your build
 
-Open **Samsung release notes** in the result to see what changed. To compare the listed build with the one on your phone, open **Settings > About phone > Software information > Build number**. A build can appear in the release notes before your phone offers the download.
+Open **Samsung notes** in the result to see what changed. To compare the listed build with the one on your phone, open **Settings > About phone > Software information > Build number**. A build can appear in the release notes before your phone offers the download.
 
 If the lookup looks wrong, [tell us](https://samupdater.com/contact/) which model and CSC you entered.
 

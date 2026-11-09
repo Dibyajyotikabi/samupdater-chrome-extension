@@ -9,58 +9,73 @@
   <script type="module" src="popup.js"></script>
 </head>
 <body>
-  <header class="masthead">
-    <a class="brand" href="https://samupdater.com/" target="_blank" rel="noopener noreferrer">
-      <img src="icons/samupdater-48.png" width="36" height="36" alt="">
-      <span>Sam <span class="wordmark">Updater</span></span>
-    </a>
-    <span class="label masthead-label">Firmware checker</span>
-  </header>
-
-  <main>
-    <section class="intro" aria-labelledby="heading">
-      <h1 id="heading">Check your Galaxy update</h1>
-      <p>Find the latest firmware Samsung lists for your device and region.</p>
-    </section>
-
-    <form id="checker">
-      <label for="device">Device name or model</label>
-      <input id="device" list="devices" type="text" placeholder="Galaxy S24 Ultra or SM-S928B"
-        maxlength="64" autocomplete="off" spellcheck="false" required>
-      <datalist id="devices"></datalist>
-
-      <label for="region">Country or CSC code</label>
-      <input id="region" list="regions" type="text" placeholder="India or INS"
-        maxlength="64" autocomplete="off" spellcheck="false" required>
-      <datalist id="regions"></datalist>
-
-      <button id="check" type="submit">Check update</button>
-    </form>
-
-    <p id="status" role="status" aria-atomic="true"></p>
-
-    <section id="release" class="release" aria-labelledby="release-device" hidden>
-      <div class="label release-label">Latest listed release</div>
-      <h2 id="release-device"></h2>
-      <p id="release-region" class="release-region"></p>
-      <dl class="details">
-        <div class="build"><dt>Build number</dt><dd id="release-build"></dd></div>
-        <div><dt>Release date</dt><dd id="release-date"></dd></div>
-        <div><dt>Security patch</dt><dd id="release-patch"></dd></div>
-        <div><dt>One UI</dt><dd id="release-one-ui"></dd></div>
-        <div><dt>Android</dt><dd id="release-android"></dd></div>
-      </dl>
-      <a id="release-notes" target="_blank" rel="noopener noreferrer" hidden>Samsung release notes</a>
-    </section>
-  </main>
-
-  <footer>
-    <a href="https://samupdater.com/category/how-to/" target="_blank" rel="noopener noreferrer">
+  <header class="topbar">
+    <a class="brand" href="https://samupdater.com/" target="_blank" rel="noopener noreferrer">SamUpdater</a>
+    <a class="quiet-link" href="https://samupdater.com/category/how-to/" target="_blank" rel="noopener noreferrer">
       Galaxy guides
-      <svg viewBox="0 0 16 16" width="14" height="14" fill="none" aria-hidden="true">
+      <svg viewBox="0 0 16 16" width="13" height="13" fill="none" aria-hidden="true">
         <path d="M5 4h7v7M12 4l-8 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
-  </footer>
+  </header>
+
+  <main>
+    <section class="checker-panel" aria-labelledby="heading">
+      <h1 id="heading">Galaxy update checker</h1>
+      <form id="checker">
+        <div class="field device-field">
+          <label for="device">Device name or model</label>
+          <input id="device" list="devices" type="text" placeholder="Galaxy S24 Ultra or SM-S928B"
+            maxlength="64" autocomplete="off" spellcheck="false" required>
+          <datalist id="devices"></datalist>
+        </div>
+
+        <div class="field">
+          <label for="region">Country or CSC code</label>
+          <input id="region" list="regions" type="text" placeholder="India or INS"
+            maxlength="64" autocomplete="off" spellcheck="false" required>
+          <datalist id="regions"></datalist>
+        </div>
+        <button id="check" type="submit">Check update</button>
+      </form>
+
+      <p id="status" role="status" aria-atomic="true"></p>
+
+      <section id="release" class="release" aria-labelledby="release-device" hidden>
+        <div class="lookup-heading">
+          <div>
+            <h2 id="release-device"></h2>
+            <p id="release-region" class="release-region"></p>
+          </div>
+          <a id="release-notes" class="quiet-link" target="_blank" rel="noopener noreferrer" hidden>Samsung notes</a>
+        </div>
+        <dl class="details">
+          <div class="build"><dt>Build number</dt><dd id="release-build"></dd></div>
+          <div><dt>Release date</dt><dd id="release-date"></dd></div>
+          <div><dt>Security patch</dt><dd id="release-patch"></dd></div>
+          <div><dt>Software</dt><dd id="release-software"></dd></div>
+        </dl>
+      </section>
+    </section>
+
+    <section class="latest" aria-labelledby="latest-heading">
+      <div class="section-heading">
+        <h2 id="latest-heading">Latest releases</h2>
+        <a class="quiet-link" href="https://samupdater.com/#results" target="_blank" rel="noopener noreferrer">Full tracker</a>
+      </div>
+      <p id="latest-status" role="status">Loading releases</p>
+      <ul id="latest-list" hidden></ul>
+      <template id="latest-row">
+        <li>
+          <a class="latest-row" target="_blank" rel="noopener noreferrer">
+            <strong class="latest-device"></strong>
+            <time class="latest-date"></time>
+            <span class="latest-region"></span>
+            <code class="latest-build"></code>
+          </a>
+        </li>
+      </template>
+    </section>
+  </main>
 </body>
 </html>
