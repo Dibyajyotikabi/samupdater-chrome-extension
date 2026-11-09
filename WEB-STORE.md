@@ -32,7 +32,7 @@ mkdir -p dist
 zip -X dist/samupdater-chrome-extension-1.0.0.zip manifest.json popup.html popup.css popup.js catalogue.js icons/*.png
 ```
 
-Upload the ZIP to the [Chrome Web Store developer dashboard](https://chrome.google.com/webstore/devconsole/). Set the homepage and support URLs in the listing, and the privacy policy URL in Privacy practices. If `samupdater.com` is verified for the publisher, select it in **Official URL** as well. Capture a screenshot of the installed popup showing a lookup result at 1280 × 800 or 640 × 400, and process the final export through Remove AI before uploading it.
+Upload the ZIP to the [Chrome Web Store developer dashboard](https://chrome.google.com/webstore/devconsole/). Set the homepage and support URLs in the listing, and the privacy policy URL in Privacy practices. If `samupdater.com` is verified for the publisher, select it in **Official URL** as well. Capture a screenshot of the installed popup showing a lookup result at 1280 × 800 or 640 × 400. Run the final export through the project's image cleanup step and verify its size and readability before uploading it.
 
 For review, open the toolbar popup and check **Galaxy S24 Ultra** with CSC **EUX**. It should show the listed build and link to Samsung's release notes without an account.
 
